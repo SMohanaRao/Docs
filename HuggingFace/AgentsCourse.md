@@ -37,3 +37,18 @@ Tokenization often works on sub-word units that can be combined.
 Each LLM has some special tokens specific to the model.  The most important of those is the End of sequence token (EOS).  
 LLMs are said to be autoregressive, meaning that the output from one pass becomes the input for the next one. This loop continues until the model predicts the next token to be the EOS token, at which point the model can stop.
 
+Messages: The Underlying System of LLMs  
+System Messages  
+ -  define how the model should behave.
+ -  serve as persistent instructions  
+system_message = {
+    "role": "system",
+    "content": "You are a professional customer service agent. Always be polite, clear, and helpful."
+}  
+Conversations: User and Assistant Messages
+Chat templates help maintain context by preserving conversation history
+ChatML - template format that structures conversations with clear role indicators (system, user, assistant).
+
+Model Context Protocol (MCP): a unified tool interface  
+(MCP) is an open protocol that standardizes how applications provide tools to LLMs  
+
